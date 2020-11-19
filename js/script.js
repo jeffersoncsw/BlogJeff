@@ -1,17 +1,11 @@
-function teste_forca(elemento){
-    if (elemento.value.length < 6){
-        console.log("Senha Fraca");
+function valida_campos(){
+    let nome = document.getElementById('nome').value;
+    let email = document.getElementById('email').value;
+    let senha = document.getElementById('senha').value;
 
-        document.getElementById("vermelho").style.display = "inline-block";
-
-    }else if (elemento.value.length >=6 && elemento.value.length <10){
-        console.log("Senha Mediana");
-
-        document.getElementById("amarelo").style.display = "inline-block";
-
+    if(nome.length > 0 && email.length > 0 && senha.length > 0){
+        document.getElementById('cadastrar-autores').style.visibility = "initial";
     }else{
-        console.log("Senha forte");
-
-        document.getElementById("verde").style.display = "inline-block";
+        document.getElementById('cadastrar-autores').style.visibility = "hidden";
     }
 }
